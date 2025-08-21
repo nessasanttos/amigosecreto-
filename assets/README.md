@@ -23,9 +23,7 @@ A estética visual deste Amigo Secreto digital busca inspiração na atmosfera c
 -   **Tipografia:** A escolha de fontes elegantes e legíveis contribui para um visual refinado.
 -   **Layout:** Um design limpo e arejado, com espaçamento adequado para garantir uma leitura confortável e uma sensação de leveza.
 -   **Elementos Visuais:** Ícones delicados e outros elementos gráficos sutis complementam a estética geral, adicionando um toque feminino sem sobrecarregar a interface.
-
 A intenção é proporcionar uma experiência de usuário visualmente agradável e que transmita uma sensação de sofisticação e charme.
-
 
 ## Como usar
 
