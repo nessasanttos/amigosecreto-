@@ -1,0 +1,312 @@
+:root {
+    --color-primary: #8C5F6D; 
+    --color-secondary: rgba(255, 230, 240, 0.7); 
+    --color-button: #7C4A5A; 
+    --color-button-hover: #9D6475; 
+    --color-white: #FFFFFF; 
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-image: url('download.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+/* Banner */
+.header-banner {
+    flex: 40%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), transparent);
+}
+
+.main-title {
+    font-family: "Dancing Script", cursive;
+    color: hsl(332, 21%, 88%);
+    text-shadow: 2px 2px 4px #000;
+    font-weight: 600; 
+    font-size: 70px;
+}
+
+/* Seção de entrada */
+.input-section {
+    flex: 60%;
+    background-color: var(--color-secondary); 
+    border-radius: 64px 64px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.section-title {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* Input */
+.input-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.input-name {
+    flex: 1;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 2px solid #d17ba3;
+    border-right: none;
+    border-radius: 25px 0 0 25px;
+    font-family: "Merriweather", serif;
+    font-style: italic;
+    color: #5a2a46;
+    background-color: #fff5fa;
+    box-shadow: 0 4px 10px rgba(158, 149, 153, 0.3);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-name:focus {
+    border-color: #b95c8a; 
+    outline: none;
+    box-shadow: 0 4px 12px #cec2c866;
+}
+
+/* Botões */
+button {
+    display: block;
+    margin: 10px auto;
+    padding: 12px 28px;
+    background: linear-gradient(135deg, hsl(317, 26%, 56%), hsl(351, 45%, 71%));
+    color: #5a2a46;
+    border: none;
+    border-radius: 40px;
+    font-size: 20px;
+    font-family: "Dancing Script", cursive;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 6px 14px rgba(249, 177, 214, 0.4);
+    transition: all 0.3s ease;
+}
+
+/* Efeito ao passar o mouse */
+button:hover {
+    background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+    transform: scale(1.07);
+    box-shadow: 0 8px 16px rgba(185, 92, 138, 0.4);
+}
+
+/* Efeito ao clicar */
+button:active {
+    transform: scale(0.93);
+}
+
+.button-add {
+    padding: 13px 25px;
+    border-radius: 0 25px 25px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.button-add:hover {
+    background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+}
+
+/* Lista de amigos */
+.friend-title {
+    color: #000000;
+}
+
+#listaAmigos li {
+    color: #000000;
+}
+
+/* Resultado */
+.result-display {
+    font-family: "Dancing Script", cursive;
+    font-size: 32px;
+    font-weight: 700;
+    color: #7c2c56;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 15px 25px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(124, 44, 86, 0.3);
+    text-align: center;
+    margin-top: 25px;
+    transition: transform 0.3s ease;
+}
+
+.result-display:hover {
+    transform: scale(1.05);
+}
+
+/* Botão sortear */
+.button-container {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+}
+
+.button-draw {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    width: 100%;
+    max-width: 300px;
+    padding: 10px 40px;
+    color: var(--color-white);
+    background-color: var(--color-button);
+    border: 2px solid var(--color-button);
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+.button-draw img {
+    margin-right: 20px;
+}
+
+.button-draw:hover {
+    background-color: var(--color-button-hover);
+    border-color: var(--color-button-hover);
+}
+
+/* Animação do resultado */
+@keyframes fadeZoom {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.show-result {
+    animation: fadeZoom 0.6s ease forwards;
+}
+
+/* Estilo do botão Reiniciar */
+#reiniciar {
+    display: block;
+    margin: 25px auto;
+    padding: 12px 28px;
+    background: linear-gradient(135deg, #fbc2eb, #f9d1d7);
+    color: #5a2a46;
+    border: none;
+    border-radius: 40px;
+    font-size: 20px;
+    font-family: "Dancing Script", cursive;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 6px 14px rgba(249, 177, 214, 0.4);
+    transition: all 0.3s ease;
+}
+
+#reiniciar:hover {
+    background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+    transform: scale(1.07);
+    box-shadow: 0 8px 16px rgba(185, 92, 138, 0.4);
+}
+
+#reiniciar:active {
+    transform: scale(0.93);
+}
+
+/* Botão remover (X) */
+.remove-btn {
+  margin-left: 8px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.05);
+  border: none;
+  color: hsl(348, 49%, 78%);
+  font-size: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.remove-btn:hover {
+  background: rgba(217, 77, 114, 0.15);
+  color: #d94d72;
+}
+
+/* Esconde visualmente mas mantém para leitores de tela */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Mensagem de erro */
+.erro {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .input-wrapper {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .button-container {
+  display: flex;
+  flex-direction: row; /* padrão: lado a lado */
+  gap: 15px;
+  justify-content: center;
+}
+
+@media (max-width: 600px) {
+  .button-container {
+    flex-direction: column; /* no celular: em coluna */
+    align-items: center;
+  }
+}
+
+  .input-name {
+    width: 100%;
+  }
+}

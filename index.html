@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+
+   <!-- Fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Merriweather:ital,wght@1,400&display=swap" rel="stylesheet">
+
+   <!-- Favicon -->
+   <link rel="icon" type="image/png" href="favicon.png">
+
+   <title>Amigo Secreto</title>
+</head>
+
+<body>
+ <main class="main-content">
+   <!-- Banner -->
+   <header class="header-banner">
+     <h1 class="main-title">Amigo Secreto</h1>
+   </header>
+
+   <!-- Seção principal -->
+   <section class="input-section">
+     <h2 class="section-title">Digite o nome dos seus amigos</h2>
+
+     <!-- Input + botão -->
+     <div class="input-wrapper">
+       <label for="amigo" class="sr-only">Nome do amigo</label>
+       <input type="text" id="amigo" class="input-name" placeholder="Digite um nome">
+       <button class="button-add">Adicionar</button>
+     </div>
+
+     <!-- Mensagem de erro -->
+     <p id="mensagemErro" class="erro"></p>
+
+     <!-- Lista de amigos -->
+     <h3 class="friend-title">Lista de amigos:</h3>
+     <ul id="listaAmigos" class="name-list" aria-labelledby="listaAmigos" role="list"></ul>
+    
+     <!-- Resultado do sorteio -->
+     <p id="resultado" class="result-display"></p>
+
+     <!-- Botões de ação -->
+     <div class="button-container">
+       <button class="button-draw" aria-label="Sortear amigo secreto">
+         <img src="assets/play_circle_outline.png" alt="Ícone para sortear">
+         Sortear amigo
+       </button>
+       <button id="reiniciar">Reiniciar</button>
+     </div>
+   </section>
+ </main>
+
+ <!-- Script -->
+ <script src="app.js" defer></script>
+</body>
+</html>
